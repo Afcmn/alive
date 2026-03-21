@@ -1,140 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alive - 独居守护</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <script>
+        window.onload = function() {
+            var userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.startsWith('zh')) {
+                window.location.href = './zh/index.html';
+            } else {
+                window.location.href = './en/index.html';
+            }
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .icon {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            margin: 0 auto 30px;
-            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.5);
-        }
-
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 18px;
-            opacity: 0.8;
-            margin-bottom: 40px;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background: #8b5cf6;
-            border-color: #8b5cf6;
-        }
-
-        .btn-primary:hover {
-            background: #7c3aed;
-        }
-
-        .lang-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .lang-switch a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .lang-switch a:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-        }
-
-        .footer {
-            margin-top: 60px;
-            font-size: 14px;
-            opacity: 0.5;
-        }
-    </style>
+    </script>
 </head>
-
 <body>
-    <div class="lang-switch">
-        <a href="en/index.html">English</a>
-    </div>
-
-    <div class="container">
-        <div class="icon">♥</div>
-        <h1>Alive</h1>
-        <p>让每一天的平安，都被看见。</p>
-
-        <div class="links">
-            <a href="mailto:afcmn_alive@163.com" class="btn btn-primary">✉️ 联系技术支持</a>
-            <a href="privacy.html" class="btn">🛡️ 隐私政策</a>
-            <a href="terms.html" class="btn">📄 用户协议</a>
-        </div>
-
-        <div class="footer">
-            &copy; 2026 Afcmn Studio. All rights reserved.
-        </div>
-    </div>
 </body>
-
 </html>
